@@ -428,6 +428,48 @@
     transition:border-color .15s ease, color .15s ease, transform .15s ease;
   }
   .social-btn:hover{border-color:var(--amber);color:var(--amber);transform:translateY(-2px);}
+  /* ---------- MODAL (Terms of Service) ---------- */
+  .modal-overlay{
+    display:none;position:fixed;inset:0;z-index:200;
+    background:rgba(10,14,22,0.72);
+    backdrop-filter:blur(3px);
+    padding:28px;
+    align-items:center;justify-content:center;
+  }
+  .modal-overlay.open{display:flex;}
+  .modal-box{
+    background:var(--paper);color:var(--ink-text);
+    width:100%;max-width:620px;max-height:82vh;
+    border-radius:var(--radius);
+    border:1px solid var(--hair-light);
+    overflow:hidden;
+    display:flex;flex-direction:column;
+  }
+  .modal-head{
+    display:flex;align-items:center;justify-content:space-between;
+    padding:20px 26px;border-bottom:1px solid var(--hair-light);
+    background:var(--paper-2);
+  }
+  .modal-head h3{font-size:18px;color:var(--ink-text);}
+  .modal-head span.eyebrow{margin-bottom:4px;}
+  .modal-close{
+    width:32px;height:32px;border-radius:7px;border:1px solid var(--hair-light);
+    background:transparent;display:flex;align-items:center;justify-content:center;
+    color:var(--ink-text);flex-shrink:0;
+  }
+  .modal-close:hover{border-color:var(--amber-deep);color:var(--amber-deep);}
+  .modal-body{padding:22px 26px 28px;overflow-y:auto;font-size:14px;color:var(--muted-2);line-height:1.65;}
+  .modal-body h4{
+    font-family:var(--mono);font-size:12px;text-transform:uppercase;letter-spacing:.06em;
+    color:var(--amber-deep);margin:20px 0 8px;
+  }
+  .modal-body h4:first-child{margin-top:0;}
+  .modal-body p{margin:0 0 4px;}
+  .modal-foot{
+    padding:14px 26px;border-top:1px solid var(--hair-light);
+    font-family:var(--mono);font-size:11.5px;color:var(--muted-2);
+  }
+
   .footer-bottom{
     display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;
     padding-top:22px;font-family:var(--mono);font-size:12px;color:var(--muted);
@@ -476,9 +518,9 @@
     <div class="wrap">
       <div class="hero-grid">
         <div>
-          <span class="eyebrow">who am i</span>
+          <span class="eyebrow">whoami</span>
           <h1>Dickens Miheso</h1>
-          <p class="hero-role">Security Researcher · Ethical Hacker · Cybersecurity Engineer. Founder at NeckidsIntel -finding what shouldn't be reachable, and writing it up so it gets fixed.</p>
+          <p class="hero-role">Security Researcher · Ethical Hacker · Cybersecurity Engineer — finding what shouldn't be reachable, and writing it up so it gets fixed.</p>
           <div class="hero-actions">
             <a href="#projects" class="btn btn-primary">View Work</a>
             <a href="#contact" class="btn btn-ghost">Hire Me</a>
@@ -497,11 +539,17 @@
             </div>
           </div>
           <div class="term-card">
-          <div class="term-line"> who is dickens</div>
+          <div class="term-head">
+            <span class="term-dot" style="background:#C1503F"></span>
+            <span class="term-dot" style="background:#E0993D"></span>
+            <span class="term-dot" style="background:#3F8F76"></span>
+          </div>
+          <div class="term-line">$ whois dickens</div>
           <div class="term-line"><b>role</b>&nbsp;&nbsp;&nbsp;&nbsp;Cybersecurity Engineer</div>
           <div class="term-line"><b>focus</b>&nbsp;&nbsp;&nbsp;Web Security · SOC · Forensics</div>
           <div class="term-line"><b>based</b>&nbsp;&nbsp;&nbsp;Kenya</div>
           <div class="term-line"><b>status</b>&nbsp;&nbsp;<span class="ok">● available for work</span></div>
+        </div>
         </div>
       </div>
 
@@ -560,12 +608,12 @@
         <div class="tl-item">
           <div class="tl-period">2024 — Present</div>
           <h3>Zetech University</h3>
-          <div class="tl-sub"> Cybersecurity &amp; Digital Forensics</div>
+          <div class="tl-sub">BSc in Cybersecurity &amp; Digital Forensics</div>
         </div>
         <div class="tl-item">
           <div class="tl-period">Ongoing</div>
           <h3>Self-Directed Learning</h3>
-          <div class="tl-sub">SOC analysis, web application security,Web development password auditing — TryHackMe, CompTIA, Offsec</div>
+          <div class="tl-sub">SOC analysis, web application security, password auditing — TryHackMe, Offsec</div>
         </div>
       </div>
     </div>
@@ -610,8 +658,8 @@
             <span class="tool-chip">Nmap</span>
             <span class="tool-chip">Gobuster</span>
             <span class="tool-chip">SQLMap</span>
+            <span class="tool-chip">Responder</span>
             <span class="tool-chip">Wireshark</span>
-            <span class="tool-chip">Docker</span>
             <span class="tool-chip">Metasploit</span>
             <span class="tool-chip">Burp Suite</span>
             <span class="tool-chip">Hydra</span>
@@ -652,7 +700,7 @@
           <input type="text" id="xssInput" class="demo-input" placeholder="<script>alert('test')</script>" />
           <br>
           <button class="demo-btn" id="xssTest">Test</button>
-                    <div class="demo-output" id="xssOutput"          <div class="demo-output" id="xssOutput">Output will render here, safely escaped. </div>
+          <div class="demo-output" id="xssOutput">Output will render here, safely escaped.</div>
         </div>
         <div class="status-panel">
           <h4>System Status</h4>
@@ -698,7 +746,8 @@
       </div>
 
       <div class="report-cta">
-        <a href="mailto:dickensmiheso894@gmail.com?subject=Request%3A%20Security%20Report%20Sample" class="btn btn-primary">Download Report</a>
+        <a href="security-report-sample.pdf" download class="btn btn-primary">Download Report</a>
+        <p>PDF, opens a real assessment write-up.</p>
       </div>
     </div>
   </section>
@@ -713,8 +762,8 @@
           <p style="color:var(--muted-2);margin-top:14px;max-width:460px;">Interested in working together, or have a question? Reach out — I'll get back to you as soon as possible.</p>
         </div>
         <div class="btn-row">
-          <a href="mailto:dickensmiheso894@gmail.com?subject=CV%20Request" class="btn btn-ghost">View CV</a>
-          <a href="mailto:dickensmiheso894@gmail.com?subject=CV%20Request" class="btn btn-primary">Download CV</a>
+          <a href="cv.pdf" target="_blank" rel="noopener" class="btn btn-ghost">View CV</a>
+          <a href="cv.pdf" download class="btn btn-primary">Download CV</a>
         </div>
       </div>
 
@@ -733,17 +782,25 @@
         </a>
       </div>
 
-        <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-    
-    <input type="text" name="name" placeholder="Your Name" required>
-    
-    <input type="email" name="email" placeholder="Your Email" required>
-    
-    <textarea name="message" placeholder="Your Message" required></textarea>
-    
-    <button type="submit">Send Message</button>
-  
-  </form>
+      <form class="contact-form" id="contactForm">
+        <div class="form-row">
+          <div class="field">
+            <label for="cName">Your Name</label>
+            <input type="text" id="cName" name="name" required>
+          </div>
+          <div class="field">
+            <label for="cEmail">Your Email</label>
+            <input type="email" id="cEmail" name="email" required>
+          </div>
+        </div>
+        <div class="field">
+          <label for="cMsg">Message</label>
+          <textarea id="cMsg" name="message" required></textarea>
+        </div>
+        <input type="checkbox" name="botcheck" id="botcheck" style="display:none" tabindex="-1" autocomplete="off">
+        <button type="submit" class="submit-btn" id="submitBtn">Send Message</button>
+        <p class="form-note" id="formNote">Sends straight to Dickens — no email app required.</p>
+      </form>
     </div>
   </section>
 
@@ -773,10 +830,53 @@
     </div>
     <div class="footer-bottom">
       <span>© 2026 Dickens Miheso. All rights reserved.</span>
-      <a href="#">Terms of Service</a>
+      <a href="#" id="termsLink">Terms of Service</a>
     </div>
   </div>
 </footer>
+
+<div class="modal-overlay" id="termsOverlay" aria-hidden="true">
+  <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="termsTitle">
+    <div class="modal-head">
+      <div>
+        <span class="eyebrow on-light">Legal</span>
+        <h3 id="termsTitle">Terms of Service</h3>
+      </div>
+      <button class="modal-close" id="termsClose" aria-label="Close">
+        <svg class="icon" viewBox="0 0 24 24" style="width:16px;height:16px;"><path d="M18 6 6 18"/><path d="M6 6l12 12"/></svg>
+      </button>
+    </div>
+    <div class="modal-body">
+      <h4>Acceptance of Terms</h4>
+      <p>By accessing or using this portfolio website ("the Site"), you agree to these Terms of Service. If you do not agree, please discontinue use of the Site.</p>
+
+      <h4>Use of Content</h4>
+      <p>All content on this Site — including text, project descriptions, security report samples, and the CV made available here — is provided for informational purposes to showcase the work and experience of Dickens Miheso. You may view and share this content for personal, non-commercial reference. Reproducing, redistributing, or presenting this content as your own work without permission is not permitted.</p>
+
+      <h4>Intellectual Property</h4>
+      <p>The design, layout, and original written content of this Site belong to Dickens Miheso unless otherwise noted. Tool and brand names referenced (e.g. Kali Linux, Nmap, Burp Suite) remain the property of their respective owners.</p>
+
+      <h4>Security Demos &amp; Sample Reports</h4>
+      <p>Any interactive security demonstrations on this Site (such as the XSS input demo) are built for safe, educational display only and do not execute arbitrary code. Sample security reports are illustrative and use redacted or representative data — they do not disclose any client's confidential information.</p>
+
+      <h4>External Links &amp; Third-Party Services</h4>
+      <p>This Site may link to third-party platforms (GitHub, LinkedIn, WhatsApp, X, and similar). Dickens Miheso is not responsible for the content, policies, or practices of those external sites.</p>
+
+      <h4>No Warranty</h4>
+      <p>This Site and its content are provided "as is," without warranties of any kind, express or implied. While reasonable care is taken to keep information accurate and up to date, no guarantee is made as to completeness or availability at all times.</p>
+
+      <h4>Limitation of Liability</h4>
+      <p>Dickens Miheso shall not be liable for any damages arising from the use of, or inability to use, this Site or its content.</p>
+
+      <h4>Changes to These Terms</h4>
+      <p>These Terms may be updated from time to time. Continued use of the Site after changes are posted constitutes acceptance of the revised Terms.</p>
+
+      <h4>Contact</h4>
+      <p>Questions about these Terms can be sent to dickensmiheso894@gmail.com.</p>
+    </div>
+    <div class="modal-foot">Last updated: October 2026</div>
+  </div>
+</div>
 
 <script>
   // mobile nav
@@ -805,15 +905,84 @@
     xssOutput.textContent = 'Rendered safely: ' + escaped;
   });
 
-  // contact form -> mailto
-  document.getElementById('contactForm').addEventListener('submit', function(e){
+  // terms of service modal
+  const termsLink = document.getElementById('termsLink');
+  const termsOverlay = document.getElementById('termsOverlay');
+  const termsClose = document.getElementById('termsClose');
+  function openTerms(e){
+    if(e) e.preventDefault();
+    termsOverlay.classList.add('open');
+    termsOverlay.setAttribute('aria-hidden','false');
+  }
+  function closeTerms(){
+    termsOverlay.classList.remove('open');
+    termsOverlay.setAttribute('aria-hidden','true');
+  }
+  termsLink.addEventListener('click', openTerms);
+  termsClose.addEventListener('click', closeTerms);
+  termsOverlay.addEventListener('click', (e) => { if(e.target === termsOverlay) closeTerms(); });
+  document.addEventListener('keydown', (e) => { if(e.key === 'Escape') closeTerms(); });
+
+  // contact form -> sends online via Web3Forms (no email app, no backend needed)
+  // Get a free access key at https://web3forms.com (just enter an email, no signup/login)
+  // and paste it below. Until a key is added, the form safely falls back to mailto.
+  const WEB3FORMS_ACCESS_KEY = "";
+
+  const contactForm = document.getElementById('contactForm');
+  const submitBtn = document.getElementById('submitBtn');
+  const formNote = document.getElementById('formNote');
+
+  function mailtoFallback(name, email, msg){
+    const subject = encodeURIComponent('Portfolio contact from ' + name);
+    const body = encodeURIComponent(msg + '\n\n— ' + name + ' (' + email + ')');
+    window.location.href = `mailto:dickensmiheso894@gmail.com?subject=${subject}&body=${body}`;
+  }
+
+  contactForm.addEventListener('submit', function(e){
     e.preventDefault();
     const name = document.getElementById('cName').value;
     const email = document.getElementById('cEmail').value;
     const msg = document.getElementById('cMsg').value;
-    const subject = encodeURIComponent('Portfolio contact from ' + name);
-    const body = encodeURIComponent(msg + '\n\n— ' + name + ' (' + email + ')');
-    window.location.href = `mailto:dickensmiheso894@gmail.com?subject=${subject}&body=${body}`;
+
+    if (!WEB3FORMS_ACCESS_KEY) {
+      formNote.textContent = 'Opening your email client — add a Web3Forms key to send this in-page instead.';
+      mailtoFallback(name, email, msg);
+      return;
+    }
+
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Sending…';
+    formNote.textContent = '';
+
+    fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+      body: JSON.stringify({
+        access_key: WEB3FORMS_ACCESS_KEY,
+        subject: 'Portfolio contact from ' + name,
+        name: name,
+        email: email,
+        message: msg,
+        botcheck: document.getElementById('botcheck').checked
+      })
+    })
+    .then(res => res.json())
+    .then(data => {
+      if (data.success) {
+        contactForm.reset();
+        submitBtn.textContent = 'Message Sent ✔';
+        formNote.textContent = 'Thanks — your message was delivered. I\'ll reply by email soon.';
+        setTimeout(() => { submitBtn.disabled = false; submitBtn.textContent = 'Send Message'; }, 4000);
+      } else {
+        throw new Error(data.message || 'Submission failed');
+      }
+    })
+    .catch(() => {
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Send Message';
+      formNote.textContent = 'Online send failed — opening your email client instead.';
+      mailtoFallback(name, email, msg);
+    });
   });
 </script>
 
