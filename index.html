@@ -4,7 +4,15 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Dickens Miheso — Security Researcher</title>
-<meta name="description" content="Dickens Miheso — Security Researcher, Ethical Hacker, Cybersecurity Engineer.">
+<meta name="description" content="Dickens Miheso — Security Researcher and cybersecurity student in Kenya. Web application security, SOC analysis, digital forensics.">
+<meta name="theme-color" content="#0F1521">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23E0993D'/%3E%3Ctext x='50' y='66' font-size='46' font-family='monospace' font-weight='700' text-anchor='middle' fill='%230F1521'%3EDM%3C/text%3E%3C/svg%3E">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Dickens Miheso — Security Researcher">
+<meta property="og:description" content="Web security, SOC analysis and digital forensics. Vulnerability reports written so they get fixed.">
+<meta property="og:image" content="https://dickensmiheso.netlify.app/photo.jpg">
+<meta property="og:url" content="https://dickensmiheso.netlify.app/">
+<meta name="twitter:card" content="summary">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -381,6 +389,11 @@
   .report-cta{margin-top:36px;display:flex;align-items:center;gap:18px;flex-wrap:wrap;}
   .report-cta p{color:var(--muted);font-size:13.5px;font-family:var(--mono);margin:0;}
 
+  .report-row details{margin-top:10px;}
+  .report-row summary{font-family:var(--mono);font-size:12.5px;color:var(--amber);cursor:pointer;width:fit-content;}
+  .report-row dl{display:grid;grid-template-columns:90px 1fr;gap:8px 16px;margin:14px 0 0;font-size:14px;color:var(--muted);}
+  .report-row dt{font-family:var(--mono);font-size:12px;color:var(--paper);}
+  .report-row dd{margin:0;}
   /* ---------- CONTACT ---------- */
   .contact-top{display:grid;grid-template-columns:1fr auto;gap:24px;align-items:end;margin-bottom:44px;}
   .contact-top .btn-row{display:flex;gap:14px;}
@@ -520,7 +533,7 @@
         <div>
           <span class="eyebrow">whoami</span>
           <h1>Dickens Miheso</h1>
-          <p class="hero-role">Security Researcher · Ethical Hacker · Cybersecurity Engineer . Founder at Neckidsintelligence — finding what shouldn't be reachable, and writing it up so it gets fixed.</p>
+          <p class="hero-role">Security Researcher · Ethical Hacker · Cybersecurity Engineer — finding what shouldn't be reachable, and writing it up so it gets fixed.</p>
           <div class="hero-actions">
             <a href="#projects" class="btn btn-primary">View Work</a>
             <a href="#contact" class="btn btn-ghost">Hire Me</a>
@@ -568,14 +581,13 @@
         <div>
           <span class="eyebrow on-light">01 / About</span>
           <h2 style="margin-top:12px;">Curiosity that turned into a discipline.</h2>
-          <p style="margin-top:24px;">I was born in 2005 and developed a strong interest in computers in 2020 — the beginning of my journey into technology. What started as curiosity quickly grew into a passion for understanding how systems work, how they can be secured, and how vulnerabilities are found and mitigated.</p>
+          <p style="margin-top:24px;">I developed a strong interest in computers in 2020 — the beginning of my journey into technology. What started as curiosity quickly grew into a passion for understanding how systems work, how they can be secured, and how vulnerabilities are found and mitigated.</p>
           <p>In 2024 I began my professional IT journey, focusing on cybersecurity — particularly ethical hacking and web security analysis. Since then I've built hands-on experience identifying and analyzing security weaknesses in web applications through multiple vulnerability assessments, and I've developed the habit of documenting findings clearly: risk, impact, and recommended fix.</p>
           <p>I'm growing toward penetration testing, digital forensics, and advanced threat analysis — with the goal of becoming a professional who doesn't just find vulnerabilities, but helps organizations build systems that hold up.</p>
         </div>
         <div class="whois">
           <div class="whois-title">Quick Facts</div>
           <dl>
-            <dt>Born</dt><dd>2005</dd>
             <dt>Interest sparked</dt><dd>2020</dd>
             <dt>Career start</dt><dd>2024</dd>
             <dt>Specialty</dt><dd>Web Security, SOC</dd>
@@ -596,11 +608,6 @@
       </div>
       <div class="timeline">
         <div class="tl-item">
-          <div class="tl-period">2010 — 2019</div>
-          <h3>Kisaina Primary</h3>
-          <div class="tl-sub">Primary School</div>
-        </div>
-        <div class="tl-item">
           <div class="tl-period">2020 — 2023</div>
           <h3>Mwihila Boys</h3>
           <div class="tl-sub">High School</div>
@@ -608,7 +615,12 @@
         <div class="tl-item">
           <div class="tl-period">2024 — Present</div>
           <h3>Zetech University</h3>
-          <div class="tl-sub"> Cybersecurity &amp; Digital Forensics</div>
+          <div class="tl-sub">BSc in Cybersecurity &amp; Digital Forensics</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-period">Aug 2026</div>
+          <h3>Cisco Networking Academy</h3>
+          <div class="tl-sub">Network Addressing and Basic Troubleshooting — certificate of course completion. <a href="cisco-network-addressing-certificate.pdf" target="_blank" rel="noopener" style="color:var(--amber);border-bottom:1px solid var(--amber);">View certificate</a></div>
         </div>
         <div class="tl-item">
           <div class="tl-period">Ongoing</div>
@@ -682,31 +694,32 @@
           <div class="case-id">CASE-001</div>
           <h3>XSS Demo Lab</h3>
           <p>A safe, controlled demonstration of cross-site scripting attacks and the input handling that prevents them.</p>
-          <div class="case-links"><a href="#">Live Demo</a><a href="#">GitHub</a></div>
+          <div class="case-links"><a href="#xss-demo">Try the demo</a><a href="https://github.com/Quebec284" target="_blank" rel="noopener">GitHub</a></div>
         </div>
         <div class="case-card">
           <div class="case-id">CASE-002</div>
           <h3>Secure Login</h3>
           <p>An authentication system built around proper input validation and session handling.</p>
-          <div class="case-links"><a href="#">Live Demo</a><a href="#">GitHub</a></div>
+          <div class="case-links"><a href="https://github.com/Quebec284" target="_blank" rel="noopener">GitHub</a></div>
+          <!-- TODO: link the exact repo, e.g. https://github.com/Quebec284/secure-login, and add a Live Demo link if deployed -->
         </div>
       </div>
 
-      <div class="demo-card">
+      <div class="demo-card" id="xss-demo">
         <div class="demo-left">
-          <div class="case-id">CASE-001 · LIVE</div>
+          <div class="case-id">CASE-001 · Live demo</div>
           <h3>XSS Demo (Safe)</h3>
           <p>Type something — including a script tag — and see how it's neutralized before it ever reaches the page.</p>
-          <input type="text" id="xssInput" class="demo-input" placeholder="<script>alert('test')</script>" />
+          <input type="text" id="xssInput" class="demo-input" aria-label="Text to test for XSS" placeholder="<script>alert('test')</script>" />
           <br>
           <button class="demo-btn" id="xssTest">Test</button>
-          <div class="demo-output" id="xssOutput">Output will render here, safely escaped.</div>
+          <div class="demo-output" id="xssOutput" aria-live="polite">Output will render here, safely escaped.</div>
         </div>
         <div class="status-panel">
-          <h4>System Status</h4>
-          <div class="status-row"><span>XSS Testing</span><span class="status-ok">✔ Passing</span></div>
-          <div class="status-row"><span>SQL Injection</span><span class="status-ok">✔ Passing</span></div>
-          <div class="status-row"><span>Recon</span><span class="status-ok">✔ Passing</span></div>
+          <h4>Defenses against XSS</h4>
+          <div class="status-row"><span>Output encoding</span><span class="status-ok">Shown here</span></div>
+          <div class="status-row"><span>Content-Security-Policy</span><span>Recommended</span></div>
+          <div class="status-row"><span>HttpOnly cookies</span><span>Recommended</span></div>
         </div>
       </div>
     </div>
@@ -723,17 +736,27 @@
 
       <div class="report-list">
         <div class="report-row">
-          <span class="report-tag tag-critical">Critical</span>
+          <span class="report-tag tag-high">High</span>
           <div>
-            <h3>Web App Pentest</h3>
+            <h3>Web App Pentest — XSS</h3>
             <p>XSS vulnerability discovered → session hijacking risk identified → remediated.</p>
+            <details><summary>Read the finding</summary>
+              <dl><dt>Finding</dt><dd>User input was reflected into the page without output encoding.</dd>
+              <dt>Impact</dt><dd>An attacker's script runs in the victim's browser and can steal the session cookie.</dd>
+              <dt>Fix</dt><dd>Context-aware output encoding, a Content-Security-Policy, and HttpOnly + SameSite cookies.</dd></dl>
+            </details>
           </div>
         </div>
         <div class="report-row">
-          <span class="report-tag tag-high">High</span>
+          <span class="report-tag tag-critical">Critical</span>
           <div>
             <h3>SQL Injection Test</h3>
             <p>Database extraction achieved in a controlled lab → recommended parameterized queries.</p>
+            <details><summary>Read the finding</summary>
+              <dl><dt>Finding</dt><dd>User input was concatenated into a SQL query.</dd>
+              <dt>Impact</dt><dd>Full database contents could be read in the lab environment.</dd>
+              <dt>Fix</dt><dd>Parameterized queries, a least-privilege database account, and server-side validation.</dd></dl>
+            </details>
           </div>
         </div>
         <div class="report-row">
@@ -741,13 +764,18 @@
           <div>
             <h3>Web Vulnerability Assessment</h3>
             <p>Real-world assessment using Nmap, Nikto, Gobuster, and SQLMap.</p>
+            <details><summary>Read the method</summary>
+              <dl><dt>Recon</dt><dd>Nmap for open ports and services.</dd>
+              <dt>Discovery</dt><dd>Gobuster for hidden paths, Nikto for known misconfigurations.</dd>
+              <dt>Testing</dt><dd>SQLMap against injectable parameters, then a prioritized write-up.</dd></dl>
+            </details>
           </div>
         </div>
       </div>
 
       <div class="report-cta">
         <a href="security-report-sample.pdf" download class="btn btn-primary">Download Report</a>
-        <p>PDF, opens a real assessment write-up.</p>
+        <p>PDF sample write-up.</p>
       </div>
     </div>
   </section>
@@ -775,10 +803,6 @@
         <a href="https://wa.me/254768436950" target="_blank" rel="noopener" class="quick-btn" style="background:var(--ink-text);color:var(--paper);">
           <svg class="icon" viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
           WhatsApp Me
-        </a>
-        <a href="tel:+254768436950" class="quick-btn" style="background:var(--ink-text);color:var(--paper);">
-          <svg class="icon" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-          Call Me
         </a>
       </div>
 
@@ -814,7 +838,7 @@
         <a class="social-btn" href="https://github.com/Quebec284" target="_blank" rel="noopener" aria-label="GitHub">
           <svg class="icon" viewBox="0 0 24 24" style="width:19px;height:19px;"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
         </a>
-        <a class="social-btn" href="https://www.linkedin.com/public-profile/settings/" target="_blank" rel="noopener" aria-label="LinkedIn">
+                <a class="social-btn" href="https://www.linkedin.com/in/dickens-miheso-3a76933a7" target="_blank" rel="noopener" aria-label="LinkedIn">
           <svg class="icon" viewBox="0 0 24 24" style="width:19px;height:19px;"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
         </a>
         <a class="social-btn" href="https://www.facebook.com/Void284" target="_blank" rel="noopener" aria-label="Facebook">
@@ -830,53 +854,9 @@
     </div>
     <div class="footer-bottom">
       <span>© 2026 Dickens Miheso. All rights reserved.</span>
-      <a href="#" id="termsLink">Terms of Service</a>
     </div>
   </div>
 </footer>
-
-<div class="modal-overlay" id="termsOverlay" aria-hidden="true">
-  <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="termsTitle">
-    <div class="modal-head">
-      <div>
-        <span class="eyebrow on-light">Legal</span>
-        <h3 id="termsTitle">Terms of Service</h3>
-      </div>
-      <button class="modal-close" id="termsClose" aria-label="Close">
-        <svg class="icon" viewBox="0 0 24 24" style="width:16px;height:16px;"><path d="M18 6 6 18"/><path d="M6 6l12 12"/></svg>
-      </button>
-    </div>
-    <div class="modal-body">
-      <h4>Acceptance of Terms</h4>
-      <p>By accessing or using this portfolio website ("the Site"), you agree to these Terms of Service. If you do not agree, please discontinue use of the Site.</p>
-
-      <h4>Use of Content</h4>
-      <p>All content on this Site — including text, project descriptions, security report samples, and the CV made available here — is provided for informational purposes to showcase the work and experience of Dickens Miheso. You may view and share this content for personal, non-commercial reference. Reproducing, redistributing, or presenting this content as your own work without permission is not permitted.</p>
-
-      <h4>Intellectual Property</h4>
-      <p>The design, layout, and original written content of this Site belong to Dickens Miheso unless otherwise noted. Tool and brand names referenced (e.g. Kali Linux, Nmap, Burp Suite) remain the property of their respective owners.</p>
-
-      <h4>Security Demos &amp; Sample Reports</h4>
-      <p>Any interactive security demonstrations on this Site (such as the XSS input demo) are built for safe, educational display only and do not execute arbitrary code. Sample security reports are illustrative and use redacted or representative data — they do not disclose any client's confidential information.</p>
-
-      <h4>External Links &amp; Third-Party Services</h4>
-      <p>This Site may link to third-party platforms (GitHub, LinkedIn, WhatsApp, X, and similar). Dickens Miheso is not responsible for the content, policies, or practices of those external sites.</p>
-
-      <h4>No Warranty</h4>
-      <p>This Site and its content are provided "as is," without warranties of any kind, express or implied. While reasonable care is taken to keep information accurate and up to date, no guarantee is made as to completeness or availability at all times.</p>
-
-      <h4>Limitation of Liability</h4>
-      <p>Dickens Miheso shall not be liable for any damages arising from the use of, or inability to use, this Site or its content.</p>
-
-      <h4>Changes to These Terms</h4>
-      <p>These Terms may be updated from time to time. Continued use of the Site after changes are posted constitutes acceptance of the revised Terms.</p>
-
-      <h4>Contact</h4>
-      <p>Questions about these Terms can be sent to dickensmiheso894@gmail.com.</p>
-    </div>
-    <div class="modal-foot">Last updated: October 2026</div>
-  </div>
-</div>
 
 <script>
   // mobile nav
@@ -904,24 +884,6 @@
       .replace(/'/g,'&#039;');
     xssOutput.textContent = 'Rendered safely: ' + escaped;
   });
-
-  // terms of service modal
-  const termsLink = document.getElementById('termsLink');
-  const termsOverlay = document.getElementById('termsOverlay');
-  const termsClose = document.getElementById('termsClose');
-  function openTerms(e){
-    if(e) e.preventDefault();
-    termsOverlay.classList.add('open');
-    termsOverlay.setAttribute('aria-hidden','false');
-  }
-  function closeTerms(){
-    termsOverlay.classList.remove('open');
-    termsOverlay.setAttribute('aria-hidden','true');
-  }
-  termsLink.addEventListener('click', openTerms);
-  termsClose.addEventListener('click', closeTerms);
-  termsOverlay.addEventListener('click', (e) => { if(e.target === termsOverlay) closeTerms(); });
-  document.addEventListener('keydown', (e) => { if(e.key === 'Escape') closeTerms(); });
 
   // contact form -> sends online via Web3Forms (no email app, no backend needed)
   // Get a free access key at https://web3forms.com (just enter an email, no signup/login)
